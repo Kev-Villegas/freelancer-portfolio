@@ -1,10 +1,11 @@
+import Hero from "./_components/Hero";
 import Header from "./_components/Header";
 
 export default function Home() {
   return (
-    <div className="min-h-[300vh] bg-gradient-to-bl from-zinc-950 to-zinc-900">
+    <main className="flex min-h-[300vh] flex-col items-center px-4">
       <Header />
-      <p> Beautiful is better than ugly.</p>
-    </div>
+      <Hero />
+    </main>
   );
 }
