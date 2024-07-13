@@ -6,6 +6,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import profileImg from "@/public/pfp.webp";
 import { Mails, NotepadText, Linkedin } from "lucide-react";
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+} from "@radix-ui/react-hover-card";
 
 const Hero = () => {
   return (
@@ -14,7 +19,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="flex items-center justify-center">
-        <div>
+        <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -30,8 +35,15 @@ const Hero = () => {
               height="192"
               priority={true}
               quality={100}
-              className="h-24 w-24 rounded-full border-[0.24rem] border-white object-cover shadow-sm"
+              className="h-24 w-24 rounded-full border-[0.24rem] border-slate-50 object-cover shadow-sm"
             />
+
+            <HoverCard openDelay={300} closeDelay={150}>
+              <HoverCardTrigger className="absolute bottom-[2px] right-1 block h-[22px] w-[22px] rounded-full border-2 border-slate-50 bg-green-600"></HoverCardTrigger>
+              <HoverCardContent className="absolute bottom-5 left-3 max-w-4xl rounded-md bg-gray-300 px-2 font-medium text-gray-950">
+                Available to work!
+              </HoverCardContent>
+            </HoverCard>
           </motion.div>
         </div>
       </div>
@@ -55,7 +67,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-xl text-slate-300"
         >
-          {" "}
           I Build Fast, Responsive and SEO-Friendly Websites That Enhance <br />{" "}
           Your Online Presence.
         </motion.h3>
