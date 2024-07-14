@@ -53,22 +53,16 @@ const Hero = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Hello, Im Kevin Villegas. <br />
+          Hey, I&apos;m Kevin Villegas. <br />
         </motion.h1>
         <motion.h3
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl text-slate-100"
+          className="text-base text-slate-300"
         >
-          A Web Developer From Argentina.
-        </motion.h3>
-        <motion.h3
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-xl text-slate-300"
-        >
-          I Build Fast, Responsive and SEO-Friendly Websites That Enhance <br />{" "}
-          Your Online Presence.
+          I&apos;m a Web Developer From Argentina, I Build Fast, Responsive and{" "}
+          <br />
+          SEO-Friendly Websites That Enhance Your Online Presence.
         </motion.h3>
       </div>
 
