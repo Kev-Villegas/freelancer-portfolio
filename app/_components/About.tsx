@@ -73,7 +73,10 @@ const About = () => {
         </div>
         <div className="grid grid-cols-2 items-center gap-2 space-y-2">
           {information.map((info) => (
-            <div key={info.id} className="flex gap-2 rounded-md">
+            <div
+              key={info.id}
+              className="flex cursor-pointer gap-2 rounded-md transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+            >
               <span className="flex items-center px-4 text-4xl text-slate-50">
                 {info.icon}
               </span>

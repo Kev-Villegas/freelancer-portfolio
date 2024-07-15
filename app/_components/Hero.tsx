@@ -60,9 +60,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-base text-slate-300"
         >
-          I&apos;m a Web Developer From Argentina, I Build Fast, Responsive and{" "}
-          <br />
-          SEO-Friendly Websites That Enhance Your Online Presence.
+          I&apos;m a Web Developer From Argentina, I Build{" "}
+          <span className="text-yellow-300">Fast</span>,{" "}
+          <span className="text-yellow-300">Responsive</span> and <br />
+          <span className="text-yellow-300">SEO-Friendly</span> Websites That
+          Enhance Your Online Presence.
         </motion.h3>
       </div>
 
