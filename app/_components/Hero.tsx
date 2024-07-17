@@ -6,11 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import profileImg from "@/public/pfp.webp";
 import { Mails, NotepadText, Linkedin } from "lucide-react";
-import {
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from "@radix-ui/react-hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/HoverCard";
 
 const Hero = () => {
   return (
@@ -40,7 +36,7 @@ const Hero = () => {
 
             <HoverCard openDelay={300} closeDelay={150}>
               <HoverCardTrigger className="absolute bottom-[2px] right-1 block h-[22px] w-[22px] rounded-full border-2 border-slate-50 bg-green-600"></HoverCardTrigger>
-              <HoverCardContent className="absolute bottom-5 left-3 max-w-4xl rounded-md bg-gray-300 px-2 font-medium text-gray-950">
+              <HoverCardContent className="w- absolute bottom-5 h-fit w-min rounded-xl bg-gray-300 font-medium text-gray-950">
                 Available to work!
               </HoverCardContent>
             </HoverCard>
