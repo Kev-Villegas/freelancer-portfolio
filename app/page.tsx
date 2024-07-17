@@ -2,6 +2,7 @@ import Hero from "./_components/Hero";
 import About from "./_components/About";
 import Header from "./_components/Header";
 import Skills from "./_components/Skills";
+import Contact from "./_components/Contact";
 import Projects from "./_components/Projects";
 import SectionDivider from "./_components/SectionDivider";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Contact />
     </main>
   );
 }
