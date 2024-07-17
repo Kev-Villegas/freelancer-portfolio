@@ -8,8 +8,8 @@ import {
   House,
   BriefcaseBusiness,
   ContactRound,
-  Phone,
   Sparkles,
+  MailPlus,
 } from "lucide-react";
 
 const Header = () => {
@@ -42,14 +42,14 @@ const Header = () => {
       id: 5,
       name: "Contact",
       hash: "#",
-      icon: <Phone size={18} />,
+      icon: <MailPlus size={18} />,
     },
   ];
 
   return (
     <header className="relative z-[999]">
       <motion.div
-        className="fixed left-1/2 top-0 h-[4.5rem] w-full rounded-b-3xl border border-white border-opacity-40 bg-slate-900 bg-opacity-80 shadow-md shadow-gray-700 backdrop-blur-[0.9rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
+        className="fixed left-1/2 top-0 h-[4.5rem] w-full rounded-b-3xl border border-white border-opacity-40 bg-slate-900 bg-opacity-80 shadow-md shadow-gray-700 backdrop-blur-[0.1rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
