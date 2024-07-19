@@ -15,6 +15,14 @@ import typescript from "@/public/skillsImages/typescript.webp";
 import tailwindIcon from "@/public/skillsImages/tailwind.webp";
 import typescriptIcon from "@/public/skillsImages/typescript.webp";
 import framermotionIcon from "@/public/skillsImages/framerMotion.png";
+import {
+  CodeXml,
+  MonitorSmartphone,
+  Rocket,
+  Search,
+  UserRoundPen,
+  Layers3,
+} from "lucide-react";
 import portfolioCover from "@/public/projectsImages/portfolioCover.webp";
 import {
   House,
@@ -23,6 +31,39 @@ import {
   Sparkles,
   MailPlus,
 } from "lucide-react";
+
+export const aboutInformation = [
+  {
+    id: 1,
+    skill: "Web Development",
+    icon: <CodeXml size={20} />,
+  },
+  {
+    id: 2,
+    skill: "SEO Optimization",
+    icon: <Search size={20} />,
+  },
+  {
+    id: 3,
+    skill: "Responsive Design",
+    icon: <MonitorSmartphone size={20} />,
+  },
+  {
+    id: 4,
+    skill: "Performance Optimization",
+    icon: <Rocket size={20} />,
+  },
+  {
+    id: 5,
+    skill: "UX/UI Friendly",
+    icon: <UserRoundPen size={20} />,
+  },
+  {
+    id: 6,
+    skill: "Multipage Website",
+    icon: <Layers3 size={20} />,
+  },
+];
 
 export const techSkills = [
   {

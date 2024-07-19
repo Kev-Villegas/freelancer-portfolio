@@ -2,49 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  CodeXml,
-  MonitorSmartphone,
-  Rocket,
-  Search,
-  UserRoundPen,
-  Layers3,
-} from "lucide-react";
+import { UserRoundPen } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import { aboutInformation } from "../_lib/data";
 
 const About = () => {
-  const information = [
-    {
-      id: 1,
-      skill: "Web Development",
-      icon: <CodeXml size={20} />,
-    },
-    {
-      id: 2,
-      skill: "SEO Optimization",
-      icon: <Search size={20} />,
-    },
-    {
-      id: 3,
-      skill: "Responsive Design",
-      icon: <MonitorSmartphone size={20} />,
-    },
-    {
-      id: 4,
-      skill: "Performance Optimization",
-      icon: <Rocket size={20} />,
-    },
-    {
-      id: 5,
-      skill: "UX/UI Friendly",
-      icon: <UserRoundPen size={20} />,
-    },
-    {
-      id: 6,
-      skill: "Multipage Website",
-      icon: <Layers3 size={20} />,
-    },
-  ];
   return (
     <motion.section
       className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-7 sm:mb-40"
@@ -72,7 +34,7 @@ const About = () => {
           </p>
         </div>
         <div className="grid grid-cols-2 items-center gap-2 space-y-2">
-          {information.map((info) => (
+          {aboutInformation.map((info) => (
             <div
               key={info.id}
               className="flex cursor-pointer gap-2 rounded-md transition-all duration-300 hover:-translate-y-2 hover:scale-105"
