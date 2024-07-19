@@ -16,6 +16,13 @@ import tailwindIcon from "@/public/skillsImages/tailwind.webp";
 import typescriptIcon from "@/public/skillsImages/typescript.webp";
 import framermotionIcon from "@/public/skillsImages/framerMotion.png";
 import portfolioCover from "@/public/projectsImages/portfolioCover.webp";
+import {
+  House,
+  BriefcaseBusiness,
+  ContactRound,
+  Sparkles,
+  MailPlus,
+} from "lucide-react";
 
 export const techSkills = [
   {
@@ -105,3 +112,36 @@ export const personalProjects = [
     type: "web",
   },
 ] as const;
+
+export const headerLinks = [
+  {
+    id: 1,
+    name: "Home",
+    hash: "#",
+    icon: <House size={19} />,
+  },
+  {
+    id: 2,
+    name: "About",
+    hash: "#",
+    icon: <ContactRound size={19} />,
+  },
+  {
+    id: 3,
+    name: "Projects",
+    hash: "#",
+    icon: <BriefcaseBusiness size={19} />,
+  },
+  {
+    id: 4,
+    name: "Skills",
+    hash: "#",
+    icon: <Sparkles size={19} />,
+  },
+  {
+    id: 5,
+    name: "Contact",
+    hash: "#",
+    icon: <MailPlus size={18} />,
+  },
+];
