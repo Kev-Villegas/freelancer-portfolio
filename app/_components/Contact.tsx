@@ -39,7 +39,10 @@ const Contact = () => {
   };
 
   return (
-    <motion.section className="mx-auto mb-8 px-2 sm:w-2/3 md:w-2/5">
+    <motion.section
+      id="contact"
+      className="mx-auto mb-8 px-2 sm:w-2/3 md:w-2/5"
+    >
       <motion.div className="flex items-center justify-center text-center">
         <SectionHeading>
           <MailPlus size={20} className="mr-2" />

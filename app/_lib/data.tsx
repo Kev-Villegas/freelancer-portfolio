@@ -158,31 +158,31 @@ export const headerLinks = [
   {
     id: 1,
     name: "Home",
-    hash: "#",
+    hash: "#home",
     icon: <House size={19} />,
   },
   {
     id: 2,
     name: "About",
-    hash: "#",
+    hash: "#about",
     icon: <ContactRound size={19} />,
   },
   {
     id: 3,
     name: "Projects",
-    hash: "#",
+    hash: "#projects",
     icon: <BriefcaseBusiness size={19} />,
   },
   {
     id: 4,
     name: "Skills",
-    hash: "#",
+    hash: "#skills",
     icon: <Sparkles size={19} />,
   },
   {
     id: 5,
     name: "Contact",
-    hash: "#",
+    hash: "#contact",
     icon: <MailPlus size={18} />,
   },
 ];
