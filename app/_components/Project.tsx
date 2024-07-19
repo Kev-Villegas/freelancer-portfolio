@@ -1,0 +1,64 @@
+"use client";
+
+import Image, { StaticImageData } from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/app/_components/ui/Card";
+
+type ProjectProps = {
+  id: number;
+  name: string;
+  description: string;
+  image: StaticImageData;
+  stack: ReadonlyArray<{
+    icon: StaticImageData;
+    name: string;
+  }>;
+};
+
+const Project = ({ name, description, image, stack }: ProjectProps) => (
+  <Card className="mx-auto flex flex-col bg-transparent">
+    <CardHeader className="mb-1">
+      <Image
+        src={image}
+        alt={name}
+        width={500}
+        height={300}
+        quality={90}
+        className="mb-2 h-[185px] rounded-b-sm rounded-t-xl transition-all duration-300 hover:scale-100"
+      />
+      <CardTitle className="flex items-center px-2 py-[5px] text-slate-200">
+        {name}
+      </CardTitle>
+      <CardDescription className="px-2 text-slate-400">
+        {description}
+      </CardDescription>
+    </CardHeader>
+    <CardContent className="flex-1">
+      <div className="flex flex-wrap items-center justify-start gap-2 text-center">
+        {stack.map((tech, index) => (
+          <div
+            key={index}
+            className="flex cursor-pointer items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-1 font-medium text-gray-300 transition-all duration-300 hover:scale-110"
+          >
+            <Image
+              src={tech.icon}
+              alt={tech.name}
+              quality={100}
+              width={20}
+              height={20}
+              className="rounded-sm"
+            />
+            <span className="text-sm">{tech.name}</span>
+          </div>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
+);
+
+export default Project;
