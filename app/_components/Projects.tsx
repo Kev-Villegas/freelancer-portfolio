@@ -6,10 +6,14 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { personalProjects } from "../_lib/data";
 import { BriefcaseBusiness } from "lucide-react";
+import { useSectionInView } from "../_lib/hooks";
 
 const Projects = () => {
+  const { ref } = useSectionInView("Projects", 0.75);
+
   return (
     <motion.section
+      ref={ref}
       id="projects"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}

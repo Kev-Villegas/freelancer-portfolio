@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Textarea } from "./ui/Textarea";
 import { MailPlus, Send } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import { useSectionInView } from "../_lib/hooks";
 import { sendEmail } from "../actions/sendEmail";
 import { ContactFormSchema } from "../_lib/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +18,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 export type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 
 const Contact = () => {
+  const { ref } = useSectionInView("Contact", 0.5);
+
   const {
     register,
     handleSubmit,
@@ -40,6 +43,7 @@ const Contact = () => {
 
   return (
     <motion.section
+      ref={ref}
       id="contact"
       className="mx-auto mb-8 px-2 sm:w-2/3 md:w-2/5"
     >

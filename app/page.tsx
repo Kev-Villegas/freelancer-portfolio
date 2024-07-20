@@ -4,7 +4,6 @@ import Header from "./_components/Header";
 import Skills from "./_components/Skills";
 import Contact from "./_components/Contact";
 import Projects from "./_components/Projects";
-import { Separator } from "./_components/ui/separator";
 import SectionDivider from "./_components/SectionDivider";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
-      <Separator />
     </main>
   );
 }

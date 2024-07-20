@@ -5,14 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profileImg from "@/public/pfp.webp";
+import { useSectionInView } from "../_lib/hooks";
 import { Mails, NotepadText, Linkedin } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/HoverCard";
 
 const Hero = () => {
+  const { ref } = useSectionInView("Home", 0.5);
   return (
     <section
       className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
       id="hero"
+      ref={ref}
     >
       <div className="flex items-center justify-center">
         <div className="relative">

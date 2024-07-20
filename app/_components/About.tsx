@@ -5,10 +5,14 @@ import { motion } from "framer-motion";
 import { UserRoundPen } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { aboutInformation } from "../_lib/data";
+import { useSectionInView } from "../_lib/hooks";
 
 const About = () => {
+  const { ref } = useSectionInView("About");
+
   return (
     <motion.section
+      ref={ref}
       className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-7 sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -21,7 +25,7 @@ const About = () => {
           About me
         </SectionHeading>
       </div>
-      <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+      <div className="mx-auto flex w-full max-w-4xl flex-col">
         <div className="flex flex-col">
           <p className="mb-4 text-center text-slate-200">
             As I complete my Technical Programming Degree and consider pursuing
@@ -33,16 +37,14 @@ const About = () => {
             apart.
           </p>
         </div>
-        <div className="grid grid-cols-2 items-center gap-2 space-y-2">
+        <div className="grid cursor-pointer grid-cols-3 gap-4">
           {aboutInformation.map((info) => (
             <div
               key={info.id}
-              className="flex cursor-pointer gap-2 rounded-md transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+              className="flex flex-col items-center justify-center gap-2 p-4 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
             >
-              <span className="flex items-center px-4 text-4xl text-slate-50">
-                {info.icon}
-              </span>
-              <span className="items-center justify-center text-start text-sm font-medium text-gray-300">
+              <span className="text-4xl text-slate-50">{info.icon}</span>
+              <span className="text-center text-sm font-medium text-gray-300">
                 {info.skill}
               </span>
             </div>

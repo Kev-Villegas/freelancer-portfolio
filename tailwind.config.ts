@@ -78,7 +78,10 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@nauverse/tailwind-dot-grid-backgrounds"),
+  ],
 } satisfies Config;
 
 export default config;

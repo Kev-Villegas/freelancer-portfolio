@@ -5,11 +5,15 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { techSkills } from "../_lib/data";
 import SectionHeading from "./SectionHeading";
+import { useSectionInView } from "../_lib/hooks";
 import { fadeInAnimationVariants } from "@/app/_lib/animations";
 
 const Skills = () => {
+  const { ref } = useSectionInView("Skills", 0.5);
+
   return (
     <section
+      ref={ref}
       id="skills"
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >

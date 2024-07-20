@@ -5,8 +5,11 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { headerLinks } from "../_lib/data";
+import { useActiveSectionContext } from "../_context/ActiveSectionContext";
 
 const Header = () => {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <header className="relative z-[999]">
       <motion.div
@@ -25,12 +28,29 @@ const Header = () => {
             >
               <Link
                 href={link.hash}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
                 className={clsx(
-                  "flex w-full items-center justify-center space-x-1 px-2 py-3 text-center transition hover:text-gray-300",
+                  "flex w-full items-center justify-center gap-1 px-3 py-3 text-center transition-all",
+                  {
+                    "w-full rounded-full": activeSection === link.name,
+                  },
                 )}
               >
-                <p className="font-light">{link.icon}</p>
-                <span className="font-normal">{link.name}</span>
+                {link.icon}
+                {link.name}
+                {link.name === activeSection && (
+                  <motion.span
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      damping: 21,
+                    }}
+                    className="absolute inset-0 -z-10 rounded-full bg-slate-800 p-3"
+                  ></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}

@@ -7,7 +7,7 @@ import { Github, Linkedin } from "lucide-react";
 const Footer = () => {
   return (
     <motion.footer
-      className="mb-3 flex flex-col items-center justify-between bg-transparent px-6 pb-4 pt-8 text-gray-300 md:flex-row"
+      className="mb-3 flex w-full flex-col items-center justify-between bg-transparent px-10 pb-4 pt-8 text-gray-400 md:flex-row"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -19,7 +19,7 @@ const Footer = () => {
         </small>
       </div>
       <div>
-        <a className="text-xs hover:underline">
+        <a className="text-xs text-gray-300 hover:underline">
           &copy; 2024 All rights reserved.
         </a>
       </div>
@@ -29,14 +29,14 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github size={24} className="hover:text-white" />
+          <Github size={24} />
         </a>
         <a
           href="https://www.linkedin.com/in/kevin--villegas/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin size={24} className="hover:text-white" />
+          <Linkedin size={24} />
         </a>
       </div>
     </motion.footer>
