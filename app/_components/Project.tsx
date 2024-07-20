@@ -21,7 +21,7 @@ type ProjectProps = {
 };
 
 const Project = ({ name, description, image, stack }: ProjectProps) => (
-  <Card className="mx-auto flex w-full flex-col bg-transparent">
+  <Card className="mx-auto flex w-full flex-col bg-zinc-950">
     <CardHeader className="mb-1">
       <Image
         src={image}
@@ -30,7 +30,7 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
         height={300}
         quality={90}
         priority
-        className="mb-2 h-[185px] w-full rounded-b-sm rounded-t-xl transition-all duration-300 hover:scale-100"
+        className="mb-2 h-[185px] w-full rounded-b-lg rounded-t-xl transition-all duration-300 hover:scale-100"
       />
       <CardTitle className="flex items-center px-2 py-[5px] text-slate-200">
         {name}
