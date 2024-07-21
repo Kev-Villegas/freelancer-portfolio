@@ -13,13 +13,13 @@ import {
 import { Tailwind } from "@react-email/tailwind";
 
 type ContactFormEmailProps = {
-  name: string;
+  fullName: string;
   message: string;
   email: string;
 };
 
 export const ContactFormEmail = ({
-  name,
+  fullName,
   message,
   email,
 }: ContactFormEmailProps) => {
@@ -27,14 +27,14 @@ export const ContactFormEmail = ({
     <Html>
       <Head />
       <Preview className="font-primary font-medium">
-        New message from {name} on your portfolio site!
+        New message from {fullName} on your portfolio site!
       </Preview>
       <Tailwind>
         <Body className="border-md bg-[#0a192f]">
           <Container>
             <Section className="p-8">
               <Heading className="font-primary text-2xl font-semibold tracking-wide text-gray-300">
-                New Message From: {name}, on your portfolio site!
+                New Message From: {fullName}, on your portfolio site!
               </Heading>
               <Text className="font-secondary mt-4 text-xl font-medium leading-loose text-[#A9A9A9]">
                 {message}

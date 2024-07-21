@@ -10,8 +10,8 @@ import { Textarea } from "./ui/Textarea";
 import { MailPlus, Send } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "../_lib/hooks";
-import { sendEmail } from "../actions/sendEmail";
 import { ContactFormSchema } from "../_lib/schema";
+import { sendEmail } from "@/app/_actions/sendEmail";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 
