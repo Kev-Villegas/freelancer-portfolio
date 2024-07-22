@@ -23,8 +23,8 @@ const Hero = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{
-          type: "tween",
-          duration: 0.7,
+          type: "spring",
+          duration: 0.3,
         }}
         className="mb-2 flex items-center justify-center"
       >

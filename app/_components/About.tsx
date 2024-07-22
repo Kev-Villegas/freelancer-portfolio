@@ -34,7 +34,7 @@ const About = () => {
             investing in a digital foundation that drives growth and sets you
             apart."
             className="mb-4 text-center font-nunito text-slate-200"
-            animationSpeed={0.006}
+            animationSpeed={0.008}
             once={true}
             tag="p"
           />
@@ -44,15 +44,15 @@ const About = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{
-            type: "tween",
+            type: "spring",
             duration: 0.6,
           }}
-          className="grid cursor-pointer grid-cols-3 gap-4 transition-all"
+          className="grid cursor-pointer grid-cols-3 gap-4"
         >
           {aboutInformation.map((info) => (
             <div
               key={info.id}
-              className="flex flex-col items-center justify-center gap-2 p-4 font-montserrat transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+              className="flex flex-col items-center justify-center gap-2 p-4 font-montserrat"
             >
               <span className="text-4xl text-slate-50">{info.icon}</span>
               <span className="text-center text-sm font-medium text-gray-300">
