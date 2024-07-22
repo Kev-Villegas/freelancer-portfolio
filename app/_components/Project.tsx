@@ -32,10 +32,10 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
         priority
         className="mb-2 h-[185px] w-full rounded-b-lg rounded-t-xl transition-all duration-300 hover:scale-100"
       />
-      <CardTitle className="flex items-center px-2 py-[5px] text-slate-200">
+      <CardTitle className="flex items-center px-2 py-[5px] font-montserrat text-slate-200">
         {name}
       </CardTitle>
-      <CardDescription className="px-2 text-slate-400">
+      <CardDescription className="px-2 font-nunito text-slate-400">
         {description}
       </CardDescription>
     </CardHeader>
@@ -44,7 +44,7 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
         {stack.map((tech, index) => (
           <div
             key={index}
-            className="flex cursor-pointer items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-1 font-medium text-gray-300 transition-all duration-300 hover:scale-110"
+            className="flex cursor-pointer items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-1 font-raleway font-medium text-gray-300 transition-all duration-300 hover:scale-110"
           >
             <Image
               src={tech.icon}

@@ -28,7 +28,7 @@ const Projects = () => {
           </SectionHeading>
 
           <div className="flex w-full items-center justify-between">
-            <p className="max-w-[900px] text-start text-xl">
+            <p className="max-w-[900px] text-start font-nunito text-xl">
               Projects I Worked On
             </p>
           </div>

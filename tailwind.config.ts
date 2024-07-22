@@ -22,6 +22,12 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

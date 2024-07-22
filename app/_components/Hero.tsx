@@ -39,7 +39,7 @@ const Hero = () => {
 
             <HoverCard openDelay={300} closeDelay={150}>
               <HoverCardTrigger className="absolute bottom-[2px] right-1 block h-[22px] w-[22px] rounded-full border-2 border-slate-50 bg-green-600"></HoverCardTrigger>
-              <HoverCardContent className="w- absolute bottom-5 h-fit w-min rounded-xl bg-gray-300 font-medium text-gray-950">
+              <HoverCardContent className="absolute bottom-5 h-fit w-min bg-gray-300 font-medium text-gray-950 md:w-max lg:min-w-max">
                 Available to work!
               </HoverCardContent>
             </HoverCard>
@@ -48,7 +48,7 @@ const Hero = () => {
       </div>
       <div className="mb-2 flex-col items-center justify-center space-y-1 text-center">
         <motion.h1
-          className="mt-4 w-full px-4 text-2xl font-medium text-slate-50 sm:text-2xl"
+          className="mt-2 w-full px-4 font-montserrat text-3xl font-medium text-slate-50 md:text-3xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -57,7 +57,7 @@ const Hero = () => {
         <motion.h3
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-base text-slate-300"
+          className="font-nunito text-base text-slate-300"
         >
           I&apos;m a Web Developer From Argentina, I Build{" "}
           <span className="text-yellow-300">Fast</span>,{" "}
@@ -71,7 +71,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15 }}
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg sm:flex-row"
+        className="flex flex-col items-center justify-center gap-2 px-4 font-raleway text-lg sm:flex-row"
       >
         <Link
           href="#contact"

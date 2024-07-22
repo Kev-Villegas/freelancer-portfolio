@@ -7,7 +7,7 @@ type SectionHeadingProps = {
 
 const SectionHeading = ({ children }: SectionHeadingProps) => {
   return (
-    <motion.h2 className="font-secondary mb-8 flex items-center justify-center text-center text-3xl font-medium capitalize text-slate-200">
+    <motion.h2 className="mb-8 flex items-center justify-center text-center font-montserrat text-3xl font-medium capitalize text-amber-100">
       {children}
     </motion.h2>
   );

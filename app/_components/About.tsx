@@ -27,7 +27,7 @@ const About = () => {
       </div>
       <div className="mx-auto flex w-full max-w-4xl flex-col">
         <div className="flex flex-col">
-          <p className="mb-4 text-center text-slate-200">
+          <p className="mb-4 text-center font-nunito text-slate-200">
             As I complete my Technical Programming Degree and consider pursuing
             a Bachelor&apos;s in Computer Science, I specialize in creating
             fast, responsive, and SEO-friendly websites that enhance your online
@@ -41,7 +41,7 @@ const About = () => {
           {aboutInformation.map((info) => (
             <div
               key={info.id}
-              className="flex flex-col items-center justify-center gap-2 p-4 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+              className="flex flex-col items-center justify-center gap-2 p-4 font-montserrat transition-all duration-300 hover:-translate-y-2 hover:scale-105"
             >
               <span className="text-4xl text-slate-50">{info.icon}</span>
               <span className="text-center text-sm font-medium text-gray-300">

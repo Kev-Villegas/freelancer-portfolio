@@ -30,7 +30,7 @@ const Skills = () => {
             whileInView="animate"
             viewport={{ once: true }}
             custom={index}
-            className="relative flex transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/25 bg-zinc-800 px-2 text-center text-base font-medium text-slate-200"
+            className="relative flex transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/25 bg-zinc-800 px-2 text-center font-nunito text-base font-medium text-slate-200"
           >
             <div className="flex items-center rounded-lg p-2">
               <Image

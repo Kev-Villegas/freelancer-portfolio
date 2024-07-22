@@ -45,7 +45,7 @@ const Contact = () => {
     <motion.section
       ref={ref}
       id="contact"
-      className="mx-auto mb-8 px-2 sm:w-2/3 md:w-2/5"
+      className="mx-auto mb-8 px-2 pb-8 sm:w-2/3 md:w-2/5"
     >
       <motion.div className="flex items-center justify-center text-center">
         <SectionHeading>
@@ -65,7 +65,9 @@ const Contact = () => {
           className="mb-3"
         />
         {errors.fullName && (
-          <p className="font-normal text-red-500">{errors.fullName.message}</p>
+          <p className="pb-2 font-nunito font-normal text-red-500">
+            {errors.fullName.message}
+          </p>
         )}
         <Label className="text-slate-300">Email</Label>
         <Input
@@ -78,7 +80,9 @@ const Contact = () => {
           className="mb-3 w-full"
         />
         {errors.email && (
-          <p className="font-normal text-red-500">{errors.email.message}</p>
+          <p className="pb-2 font-nunito font-normal text-red-500">
+            {errors.email.message}
+          </p>
         )}
         <Label className="text-slate-300">Message</Label>
         <Textarea
@@ -92,15 +96,19 @@ const Contact = () => {
           className="mb-3 resize-none"
         />
         {errors.message && (
-          <p className="font-normal text-red-500">{errors.message.message}</p>
+          <p className="pb-2 font-nunito font-normal text-red-500">
+            {errors.message.message}
+          </p>
         )}
         <Button
           type="submit"
-          className="group mt-2 flex h-fit w-full items-center justify-center gap-2 rounded-full bg-slate-300 text-base font-semibold text-slate-800 outline-none transition-all duration-500 hover:scale-105 hover:bg-slate-300 focus:scale-110 active:scale-105 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10"
+          className="group z-[1000] mt-2 flex h-full w-full items-center justify-center gap-2 rounded-full bg-slate-300 font-raleway text-base font-bold text-slate-800 outline-none transition-all duration-500 hover:scale-105 hover:bg-slate-300 focus:scale-110 active:scale-105 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
-            <div className="h-fit animate-spin rounded-full border-b-2 border-white"></div>
+            <div className="h-full items-center justify-center rounded-full text-center">
+              Sending...
+            </div>
           ) : (
             <>
               Submit Message{" "}
