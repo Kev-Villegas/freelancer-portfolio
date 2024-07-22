@@ -6,6 +6,7 @@ import { UserRoundPen } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { aboutInformation } from "../_lib/data";
 import { useSectionInView } from "../_lib/hooks";
+import { AnimatedText } from "./AnimatedText";
 
 const About = () => {
   const { ref } = useSectionInView("About");
@@ -26,16 +27,20 @@ const About = () => {
         </SectionHeading>
       </div>
       <div className="mx-auto flex w-full max-w-4xl flex-col">
-        <div className="flex flex-col">
-          <p className="mb-4 text-center font-nunito text-slate-200">
-            As I complete my Technical Programming Degree and consider pursuing
-            a Bachelor&apos;s in Computer Science, I specialize in creating
+        <div className="mb-2 flex flex-col">
+          <AnimatedText
+            text="As I complete my Technical Programming Degree and consider pursuing
+            a Bachelor's in Computer Science, I specialize in creating
             fast, responsive, and SEO-friendly websites that enhance your online
             presence. Imagine converting visitors into loyal customers with a
             user-friendly site tailored to your needs. Partnering with me means
             investing in a digital foundation that drives growth and sets you
-            apart.
-          </p>
+            apart."
+            className="mb-4 text-center font-nunito text-slate-200"
+            animationSpeed={0.009}
+            once={true}
+            tag="p"
+          />
         </div>
         <div className="grid cursor-pointer grid-cols-3 gap-4">
           {aboutInformation.map((info) => (
