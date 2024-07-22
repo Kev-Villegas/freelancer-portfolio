@@ -42,18 +42,24 @@ const Contact = () => {
   };
 
   return (
-    <motion.section
+    <section
       ref={ref}
       id="contact"
       className="mx-auto mb-8 px-2 pb-8 sm:w-2/3 md:w-2/5"
     >
-      <motion.div className="flex items-center justify-center text-center">
+      <div className="flex items-center justify-center text-center">
         <SectionHeading>
           <MailPlus size={20} className="mr-2" />
           Contact Me
         </SectionHeading>
-      </motion.div>
-      <form onSubmit={handleSubmit(processForm)} className="text-gray-300">
+      </div>
+      <motion.form
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6 }}
+        onSubmit={handleSubmit(processForm)}
+        className="text-gray-300"
+      >
         <Label className="text-slate-300">Full Name</Label>
         <Input
           {...register("fullName")}
@@ -116,8 +122,8 @@ const Contact = () => {
             </>
           )}
         </Button>
-      </form>
-    </motion.section>
+      </motion.form>
+    </section>
   );
 };
 

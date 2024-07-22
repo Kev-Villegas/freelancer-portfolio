@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profileImg from "@/public/pfp.webp";
+import { AnimatedText } from "./AnimatedText";
 import { useSectionInView } from "../_lib/hooks";
 import { Mails, NotepadText, Linkedin } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/HoverCard";
@@ -13,20 +14,22 @@ const Hero = () => {
   const { ref } = useSectionInView("Home", 0.5);
   return (
     <section
-      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center transition-all sm:mb-0"
       id="hero"
       ref={ref}
     >
-      <div className="flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "tween",
+          duration: 0.7,
+        }}
+        className="mb-2 flex items-center justify-center"
+      >
         <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.15,
-            }}
-          >
+          <div>
             <Image
               src={profileImg}
               alt="Kevin Villegas"
@@ -43,34 +46,44 @@ const Hero = () => {
                 Available to work!
               </HoverCardContent>
             </HoverCard>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </motion.div>
       <div className="mb-2 flex-col items-center justify-center space-y-1 text-center">
         <motion.h1
-          className="mt-2 w-full px-4 font-montserrat text-3xl font-medium text-slate-50 md:text-3xl"
+          className="w-full px-4 font-montserrat text-3xl font-medium text-slate-50 md:text-3xl"
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >
-          Hey, I&apos;m Kevin Villegas. <br />
+          <AnimatedText
+            text="Hey, I'm Kevin Villegas."
+            once={true}
+            animationSpeed={0.04}
+          />
         </motion.h1>
         <motion.h3
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="font-nunito text-base text-slate-300"
         >
           I&apos;m a Web Developer From Argentina, I Build{" "}
-          <span className="text-yellow-300">Fast</span>,{" "}
-          <span className="text-yellow-300">Responsive</span> and <br />
-          <span className="text-yellow-300">SEO-Friendly</span> Websites That
-          Enhance Your Online Presence.
+          <span className="font-semibold text-yellow-300">Fast</span>,{" "}
+          <span className="font-semibold text-yellow-300">Responsive</span> and{" "}
+          <br />
+          <span className="font-semibold text-yellow-300">
+            SEO-Friendly
+          </span>{" "}
+          Websites That Enhance Your Online Presence.
         </motion.h3>
       </div>
 
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.45 }}
         className="flex flex-col items-center justify-center gap-2 px-4 font-raleway text-lg sm:flex-row"
       >
         <Link

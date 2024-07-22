@@ -7,21 +7,21 @@ import { Github, Linkedin } from "lucide-react";
 const Footer: React.FC = () => {
   return (
     <motion.footer
-      className="flex w-full flex-col items-center justify-between bg-transparent px-4 py-4 font-nunito text-sm text-gray-400 md:flex-row"
+      className="flex w-full flex-col items-center justify-between bg-transparent px-4 py-1 font-nunito text-sm text-gray-400 md:flex-row"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
       <div className="flex flex-col items-center md:items-start">
-        <small className="block text-[13px]">
+        <small className="ml-2 block text-xs">
           Kevin Villegas | Web Developer
         </small>
       </div>
       <div className="mt-2 md:mt-0">
         <a className="hover:underline">&copy; 2024 All rights reserved.</a>
       </div>
-      <div className="mt-2 flex space-x-4 sm:mr-0 md:mt-0 lg:mr-6">
+      <div className="mt-2 flex space-x-4 text-xs sm:mr-0 md:mt-0 lg:mr-6">
         <a
           href="https://github.com/Kev-Villegas"
           target="_blank"

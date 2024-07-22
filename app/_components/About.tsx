@@ -4,20 +4,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import { UserRoundPen } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import { AnimatedText } from "./AnimatedText";
 import { aboutInformation } from "../_lib/data";
 import { useSectionInView } from "../_lib/hooks";
-import { AnimatedText } from "./AnimatedText";
 
 const About = () => {
   const { ref } = useSectionInView("About");
 
   return (
-    <motion.section
+    <section
       ref={ref}
       className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-7 sm:mb-40"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
     >
       <div className="flex items-center justify-center text-center text-slate-100">
@@ -37,12 +34,21 @@ const About = () => {
             investing in a digital foundation that drives growth and sets you
             apart."
             className="mb-4 text-center font-nunito text-slate-200"
-            animationSpeed={0.009}
+            animationSpeed={0.006}
             once={true}
             tag="p"
           />
         </div>
-        <div className="grid cursor-pointer grid-cols-3 gap-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "tween",
+            duration: 0.6,
+          }}
+          className="grid cursor-pointer grid-cols-3 gap-4 transition-all"
+        >
           {aboutInformation.map((info) => (
             <div
               key={info.id}
@@ -54,9 +60,9 @@ const About = () => {
               </span>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -22,7 +22,7 @@ const Header = () => {
           {headerLinks.map((link) => (
             <motion.li
               key={link.id}
-              className="relative flex h-3/4 items-center justify-center"
+              className="relative flex h-3/4 items-center justify-center font-sans"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >

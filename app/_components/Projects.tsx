@@ -33,7 +33,7 @@ const Projects = () => {
             </p>
           </div>
         </div>
-        <div className="mt-7 grid w-[90%] grid-cols-1 gap-4 sm:w-full sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3">
+        <div className="mt-6 grid w-[90%] grid-cols-1 gap-4 sm:w-full sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3">
           {personalProjects.map((project) => (
             <Project
               id={project.id}

@@ -15,7 +15,7 @@ const Skills = () => {
     <section
       ref={ref}
       id="skills"
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[46rem] scroll-mt-28 sm:mb-40"
     >
       <SectionHeading>
         <Sparkles size={20} className="mr-2" />
@@ -30,7 +30,7 @@ const Skills = () => {
             whileInView="animate"
             viewport={{ once: true }}
             custom={index}
-            className="relative flex transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/25 bg-zinc-800 px-2 text-center font-nunito text-base font-medium text-slate-200"
+            className="relative flex transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/25 bg-zinc-800 px-2 text-center font-nunito text-base font-medium text-slate-200 hover:bg-zinc-700"
           >
             <div className="flex items-center rounded-lg p-2">
               <Image
