@@ -13,8 +13,9 @@ import gameHub from "@/public/projectsImages/gameHub.webp";
 import javascript from "@/public/skillsImages/javascript.webp";
 import typescript from "@/public/skillsImages/typescript.webp";
 import tailwindIcon from "@/public/skillsImages/tailwind.webp";
+import prismaOrm from "@/public/skillsImages/prisma.webp";
 import typescriptIcon from "@/public/skillsImages/typescript.webp";
-import framermotionIcon from "@/public/skillsImages/framerMotion.png";
+import framermotionIcon from "@/public/skillsImages/framerMotion.webp";
 import {
   CodeXml,
   MonitorSmartphone,
@@ -105,6 +106,11 @@ export const techSkills = [
     id: 992,
     name: "Next.js",
     image: next,
+  },
+  {
+    id: 99,
+    name: "Prisma ORM",
+    image: prismaOrm,
   },
   {
     id: 991,

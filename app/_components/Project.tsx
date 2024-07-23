@@ -37,10 +37,7 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
         <Image
           src={image}
           alt={name}
-          width={500}
-          height={300}
           quality={90}
-          priority
           className="mb-2 h-[185px] w-full rounded-b-lg rounded-t-xl transition-all duration-300 hover:scale-100"
         />
       </motion.div>

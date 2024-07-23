@@ -41,7 +41,10 @@ const Hero = () => {
             />
 
             <HoverCard openDelay={300} closeDelay={150}>
-              <HoverCardTrigger className="absolute bottom-[2px] right-1 block h-[22px] w-[22px] rounded-full border-2 border-slate-50 bg-green-600"></HoverCardTrigger>
+              <HoverCardTrigger
+                href="/"
+                className="absolute bottom-[2px] right-1 block h-[22px] w-[22px] rounded-full border-2 border-slate-50 bg-green-600"
+              ></HoverCardTrigger>
               <HoverCardContent className="absolute bottom-5 h-fit w-min bg-gray-300 font-medium text-gray-950 md:w-max lg:min-w-max">
                 Available to work!
               </HoverCardContent>
@@ -62,7 +65,7 @@ const Hero = () => {
             animationSpeed={0.08}
           />
         </motion.h1>
-        <motion.h3
+        <motion.h2
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -76,7 +79,7 @@ const Hero = () => {
             SEO-Friendly
           </span>{" "}
           Websites That Enhance Your Online Presence.
-        </motion.h3>
+        </motion.h2>
       </div>
 
       <motion.div
@@ -88,6 +91,7 @@ const Hero = () => {
       >
         <Link
           href="#contact"
+          aria-label="Contact Me"
           className="font-secondary flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 font-medium text-[#F8F8FF] outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
         >
           Contact Me <Mails />
@@ -96,13 +100,15 @@ const Hero = () => {
           href={"cv.pdf"}
           className="font-secondary flex items-center gap-2 rounded-full bg-[#FFFFF0] px-7 py-3 font-medium text-[#101720] opacity-70 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
           target="_blank"
+          aria-label="Download CV"
         >
           CV
           <NotepadText className="text-slate-900" />
         </a>
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+          className="flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/kevin--villegas/"
+          aria-label="Linkedin"
           target="_blank"
         >
           <Linkedin className="rounded-md text-slate-900" />

@@ -35,9 +35,11 @@ const Skills = () => {
             <div className="flex items-center rounded-lg p-2">
               <Image
                 src={skill.image}
-                alt={skill.name}
-                quality={90}
-                className="mr-2 h-[22px] w-[22px] cursor-pointer rounded-[4px]"
+                alt="Tech Skills"
+                quality={100}
+                height={20}
+                width={20}
+                className="mr-2 cursor-pointer rounded-[4px]"
               />
               <span>{skill.name}</span>
             </div>
