@@ -58,6 +58,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
         onSubmit={handleSubmit(processForm)}
+        viewport={{ once: true }}
         className="text-gray-300"
       >
         <Label className="text-slate-300">Full Name</Label>
