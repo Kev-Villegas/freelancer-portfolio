@@ -158,7 +158,7 @@ export const headerLinks = [
   {
     id: 1,
     name: "Home",
-    hash: "#home",
+    hash: "#hero",
     icon: <House size={19} />,
   },
   {

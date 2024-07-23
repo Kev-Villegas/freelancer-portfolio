@@ -59,7 +59,7 @@ const Hero = () => {
           <AnimatedText
             text="Hey, I'm Kevin Villegas."
             once={true}
-            animationSpeed={0.04}
+            animationSpeed={0.08}
           />
         </motion.h1>
         <motion.h3
