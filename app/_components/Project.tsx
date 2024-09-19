@@ -22,8 +22,18 @@ type ProjectProps = {
 };
 
 const projectVariants = {
-  hidden: { opacity: 0, y: 75 },
-  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -100 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeInOut",
+      type: "spring",
+      stiffness: 120,
+      staggerChildren: 0.3,
+    },
+  },
 };
 
 const Project = ({ name, description, image, stack }: ProjectProps) => (
@@ -34,17 +44,17 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
           src={image}
           alt={name}
           quality={90}
-          className="mb-2 h-[185px] w-full rounded-b-lg rounded-t-xl transition-all duration-300 hover:scale-100"
+          className="mb-2 h-[200px] w-full rounded-b-lg rounded-t-xl object-cover transition-all duration-300 hover:scale-100"
         />
 
-        <CardTitle className="flex items-center px-2 py-[5px] font-montserrat text-slate-200">
+        <CardTitle className="flex items-center px-2 py-0 font-montserrat text-slate-200">
           <motion.span
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
-              duration: 3.5,
+              duration: 1.2,
             }}
             className="text-xl"
           >

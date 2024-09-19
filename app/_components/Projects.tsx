@@ -40,11 +40,20 @@ const Projects = () => {
             Projects
           </SectionHeading>
 
-          <div className="flex w-full items-center justify-between">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.8, type: "spring", stiffness: 100 },
+            }}
+            viewport={{ once: true }}
+            className="flex w-full items-center justify-between"
+          >
             <p className="max-w-[900px] text-start font-nunito text-xl">
               Projects I Worked On
             </p>
-          </div>
+          </motion.div>
         </div>
         <motion.div
           className="mt-6 grid w-[90%] grid-cols-1 gap-4 sm:w-full sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3"
