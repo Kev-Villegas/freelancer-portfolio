@@ -8,6 +8,18 @@ import { personalProjects } from "../_lib/data";
 import { BriefcaseBusiness } from "lucide-react";
 import { useSectionInView } from "../_lib/hooks";
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 100 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.6,
+      delayChildren: 0.3,
+    },
+  },
+};
+
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.75);
 
@@ -15,10 +27,10 @@ const Projects = () => {
     <motion.section
       ref={ref}
       id="projects"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial="hidden"
+      animate="show"
       viewport={{ once: true }}
-      transition={{ delay: 0.175 }}
+      variants={containerVariants}
       className="mb-28 max-w-[44rem] scroll-mt-28 sm:mb-40"
     >
       <div className="container px-4 md:px-6">
@@ -34,7 +46,10 @@ const Projects = () => {
             </p>
           </div>
         </div>
-        <div className="mt-6 grid w-[90%] grid-cols-1 gap-4 sm:w-full sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3">
+        <motion.div
+          className="mt-6 grid w-[90%] grid-cols-1 gap-4 sm:w-full sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-3"
+          variants={containerVariants}
+        >
           {personalProjects.map((project) => (
             <Project
               id={project.id}
@@ -45,7 +60,7 @@ const Projects = () => {
               stack={project.stack}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
