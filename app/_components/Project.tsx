@@ -39,12 +39,12 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
 
         <CardTitle className="flex items-center px-2 py-[5px] font-montserrat text-slate-200">
           <motion.span
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
-              duration: 1.5,
+              duration: 3.5,
             }}
             className="text-xl"
           >
