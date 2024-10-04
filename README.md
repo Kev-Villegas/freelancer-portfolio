@@ -1,4 +1,5 @@
 ## Personal Portfolio
+
 This is a personal portfolio project built using Next.js, TypeScript, and React.js. It showcases your work, skills, and projects with smooth animations using Framer.Motion. 
 The project includes a contact form where users can send messages, with email handling and styling via Resend and React Email, respectively. Form validation is handled with Zod.
 
@@ -8,7 +9,7 @@ The project includes a contact form where users can send messages, with email ha
 - Contact Form: Users can send messages via the form, with validation using Zod and email sending managed by Resend.
 - Styled Emails: Emails sent through the form are styled using React Email.
 - Responsive Design: Fully responsive design that adapts to different screen sizes.
-- 
+
 ## Technologies
 
 - Next.js: Full-stack React framework.
