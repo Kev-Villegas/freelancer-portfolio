@@ -24,7 +24,7 @@ The project includes a contact form where users can send messages, with email ha
 1) Clone the repositorie
 ```bash
 git clone https://github.com/yourusername/personal--portfolio.git
-cd portfolio
+cd personal--portfolio
 ```
 2) Install dependencies:
 ```bash
