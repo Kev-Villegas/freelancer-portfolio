@@ -37,8 +37,8 @@ const About = () => {
   };
 
   const childVariants = {
-    hidden: { opacity: 0, x: 100 },
-    show: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 100, y: -100 },
+    show: { opacity: 1, x: 0, y: 0, transition: { duration: 0.8 } },
   };
 
   return (
@@ -65,13 +65,15 @@ const About = () => {
             viewport={{ once: true }}
             className="mb-4 text-center font-nunito text-slate-200"
           >
-            As I complete my Technical Programming Degree and consider pursuing
-            a Bachelors in Computer Science, I specialize in creating fast,
-            responsive, and SEO-friendly websites that enhance your online
-            presence. Imagine converting visitors into loyal customers with a
-            user-friendly site tailored to your needs. Partnering with me means
-            investing in a digital foundation that drives growth and sets you
-            apart.
+            As I approach the completion of my Technical Programming Degree and
+            consider advancing into a Bachelor&apos;s in Computer Science, I am
+            diving deep into the fascinating world of backend development. This
+            journey has been both challenging and rewarding, as I uncover the
+            complex layers that power seamless application experiences. I&apos;m
+            driven by a passion for continuous learning and thrive on turning
+            feedback into fuel for growth. My focus is on mastering the skills
+            that will allow me to create impactful, efficient solutions, while
+            staying adaptable in an ever-evolving tech landscape.
           </motion.span>
         </div>
         <motion.div
