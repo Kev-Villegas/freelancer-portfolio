@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Personal Portfolio
 
-## Getting Started
+This is a personal portfolio project built using Next.js, TypeScript, and React.js. It showcases your work, skills, and projects with smooth animations using Framer.Motion. 
+The project includes a contact form where users can send messages, with email handling and styling via Resend and React Email, respectively. Form validation is handled with Zod.
 
-First, run the development server:
+## Features
+
+- Animated Portfolio: Smooth and dynamic animations implemented with Framer Motion.
+- Contact Form: Users can send messages via the form, with validation using Zod and email sending managed by Resend.
+- Styled Emails: Emails sent through the form are styled using React Email.
+- Responsive Design: Fully responsive design that adapts to different screen sizes.
+
+## Technologies
+
+- Next.js: Full-stack React framework.
+- TypeScript: Ensures type safety and clean code.
+- React.js: Component-based library for building the UI.
+- Framer Motion: Animation library for smooth transitions.
+- Resend: Email sending service.
+- React Email: For styling the emails sent from the contact form.
+- Zod: Schema validation for the contact form inputs.
+
+## Installation
+1) Clone the repositorie
+```bash
+git clone https://github.com/yourusername/personal--portfolio.git
+cd personal--portfolio
+```
+2) Install dependencies:
+```bash
+npm install
+```
+
+3) Set up environment variables in a .env file:
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+```
+
+3) Run the application:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+The project is ready to be deployed on platforms like Vercel.
