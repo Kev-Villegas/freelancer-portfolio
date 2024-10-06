@@ -8,8 +8,8 @@ import ActiveSectionContext from "./_context/ActiveSectionContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kevin | Web Developer",
-  description: "Kevin Villegas | Web Developer From Argentina",
+  title: "Kevin | Front-End Developer",
+  description: "Kevin Villegas | Front-End Developer From Argentina",
 };
 
 export default function RootLayout({
