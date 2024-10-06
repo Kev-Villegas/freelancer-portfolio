@@ -43,8 +43,8 @@ const Project = ({ name, description, image, stack }: ProjectProps) => (
         <Image
           src={image}
           alt={name}
-          quality={90}
-          className="mb-2 h-[200px] w-full rounded-b-lg rounded-t-xl object-cover transition-all duration-300 hover:scale-100"
+          quality={100}
+          className="mb-2 h-[200px] w-full rounded-b-lg rounded-t-xl object-fill"
         />
 
         <CardTitle className="flex items-center px-2 py-0 font-montserrat text-slate-200">

@@ -8,23 +8,16 @@ import github from "@/public/skillsImages/github.webp";
 import reactIcon from "@/public/skillsImages/react.webp";
 import nextjsIcon from "@/public/skillsImages/next.webp";
 import chakra from "@/public/skillsImages/chakraui.webp";
+import prismaOrm from "@/public/skillsImages/prisma.webp";
 import tailwind from "@/public/skillsImages/tailwind.webp";
 import gameHub from "@/public/projectsImages/gameHub.webp";
+import ecommerce from "@/public/projectsImages/ecommerce.png";
 import javascript from "@/public/skillsImages/javascript.webp";
 import typescript from "@/public/skillsImages/typescript.webp";
 import tailwindIcon from "@/public/skillsImages/tailwind.webp";
-import prismaOrm from "@/public/skillsImages/prisma.webp";
 import typescriptIcon from "@/public/skillsImages/typescript.webp";
-import framermotionIcon from "@/public/skillsImages/framerMotion.webp";
-import {
-  CodeXml,
-  MonitorSmartphone,
-  Rocket,
-  Search,
-  UserRoundPen,
-  Layers3,
-} from "lucide-react";
-import portfolioCover from "@/public/projectsImages/portfolioCover.webp";
+// import framermotionIcon from "@/public/skillsImages/framerMotion.webp";
+import { GraduationCap, Speech, Zap } from "lucide-react";
 import {
   House,
   BriefcaseBusiness,
@@ -36,33 +29,18 @@ import {
 export const aboutInformation = [
   {
     id: 1,
-    skill: "Web Development",
-    icon: <CodeXml size={20} />,
+    skill: "Self-Taught",
+    icon: <GraduationCap size={25} />,
   },
   {
     id: 2,
-    skill: "SEO Optimization",
-    icon: <Search size={20} />,
+    skill: "Comunicative",
+    icon: <Speech size={25} />,
   },
   {
     id: 3,
-    skill: "Responsive Design",
-    icon: <MonitorSmartphone size={20} />,
-  },
-  {
-    id: 4,
-    skill: "Performance Optimization",
-    icon: <Rocket size={20} />,
-  },
-  {
-    id: 5,
-    skill: "UX/UI Friendly",
-    icon: <UserRoundPen size={20} />,
-  },
-  {
-    id: 6,
-    skill: "Multipage Website",
-    icon: <Layers3 size={20} />,
+    skill: "Proactive",
+    icon: <Zap size={25} />,
   },
 ];
 
@@ -146,15 +124,17 @@ export const personalProjects = [
   },
   {
     id: 2,
-    name: "Portfolio",
-    description: "Personal Portfolio",
+    name: "E-Commerce",
+    description:
+      "Built a full-stack E-Commerce with a custom RESTful API and full CRUD functionality.",
     stack: [
-      { icon: framermotionIcon, name: "Framer Motion" },
+      { icon: prismaOrm, name: "Prisma" },
       { icon: nextjsIcon, name: "Next.js" },
       { icon: reactIcon, name: "React.js" },
+      { icon: typescript, name: "TypeScript" },
       { icon: tailwindIcon, name: "Tailwind CSS" },
     ],
-    image: portfolioCover,
+    image: ecommerce,
     link: "",
     type: "web",
   },
