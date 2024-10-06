@@ -71,14 +71,15 @@ const Hero = () => {
           viewport={{ once: true }}
           className="font-nunito text-base text-slate-300"
         >
-          I&apos;m a Web Developer From Argentina, I Build{" "}
-          <span className="font-semibold text-yellow-300">Fast</span>,{" "}
-          <span className="font-semibold text-yellow-300">Responsive</span> and{" "}
-          <br />
+          I&apos;m a Front-End Developer From Argentina, I&apos;m Currently
+          learning <br />{" "}
           <span className="font-semibold text-yellow-300">
-            SEO-Friendly
+            Back-End Development
+          </span>
+          , <span className="font-semibold">to become a </span>
+          <span className="font-semibold text-yellow-300">
+            Full-Stack Developer
           </span>{" "}
-          Websites That Enhance Your Online Presence.
         </motion.h2>
       </div>
 
